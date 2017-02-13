@@ -1,0 +1,6 @@
+# android_apps-indigo_Editored
+目前无法解决：
+make_a_map这个module中mapview中只能一次显示occupancygridLayer这一个图层；
+我自己添加了PathLayer（显示机器人的运行轨迹，通过hectormap_trajectory发布机器人的轨迹，在rviz中测试可以显示机器人的轨迹）、PoseLayer（与robotlayer通过tf转换获取机器人位置不同，这个layer直接订阅机器人的位置信息，）。这两个Layer可以先注释掉。
+addlayer方法通过github中的issuelist已经解决，具体办法就是改依赖库的位置。
+rosjava/android_apps#55
